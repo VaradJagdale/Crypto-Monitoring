@@ -82,7 +82,7 @@ PRICE_FETCH_INTERVAL_MS=20000
 REDIS_USE_TLS=true
 ```
 
-4.**Start the server:**
+4. **Start the server:**
 
 ``bash
 npm run start
