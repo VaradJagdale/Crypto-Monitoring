@@ -57,9 +57,11 @@ This project is a real-time cryptocurrency monitoring and alerting system. It al
 
 1. **Clone the repository:**
 
- ```bash
- git clone https://github.com/<your-username>/CryptoMonitoring.git
- cd CryptoMonitoring
-
+```bash
+git clone https://github.com/<your-username>/CryptoMonitoring.git
+cd CryptoMonitoring
 2. Install dependencies:
+bash
+Copy code
+npm install
 
