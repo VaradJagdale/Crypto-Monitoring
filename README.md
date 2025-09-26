@@ -102,6 +102,7 @@ npm run start
 - **Create an alert:**
    
    POST /api/alerts
+  
 Body:
 ```json
 {
