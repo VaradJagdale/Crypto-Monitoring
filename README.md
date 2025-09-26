@@ -79,8 +79,44 @@ REDIS_USERNAME=<redis-username>
 REDIS_PASSWORD=<redis-password>
 COINGECKO_BASE=https://api.coingecko.com/api/v3
 PRICE_FETCH_INTERVAL_MS=20000
-REDIS_USE_TLS=false
+REDIS_USE_TLS=true
 ```
+
+4.**Start the server:**
+
+``bash
+npm run start
+``
+
+5. **The server will run at http://localhost:4000.**
+
+---
+
+## API Endpoints
+
+1. **Get latest price:**
+
+GET /api/price/:symbol
+Example: /api/price/bitcoin
+
+2. **Create an alert:**
+   
+POST /api/alerts
+Body:
+```json
+{
+  "userId": "testUser1",
+  "symbol": "bitcoin",
+  "condition": "above",
+  "target": 110000,
+}
+```
+
+3. **Get user alerts:**
+   
+GET /api/alerts/:userId
+Example: /api/alerts/testUser1
+
 
 
 
