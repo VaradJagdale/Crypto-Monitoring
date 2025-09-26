@@ -57,6 +57,24 @@ This project is a real-time cryptocurrency monitoring and alerting system. It al
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/<your-username>/CryptoMonitoring.git
-   cd CryptoMonitoring
+ ```bash
+ git clone https://github.com/<your-username>/CryptoMonitoring.git
+ cd CryptoMonitoring
+
+ Install dependencies:
+
+ ```bash
+ npm install
+
+ Set up environment variables in a .env file:
+
+ ```bash
+ PORT=4000
+ MONGODB_URI=<your-mongodb-uri>
+ REDIS_HOST=<redis-host>
+ REDIS_PORT=<redis-port>
+ REDIS_USERNAME=<redis-username>
+ REDIS_PASSWORD=<redis-password>
+ COINGECKO_BASE=https://api.coingecko.com/api/v3
+ PRICE_FETCH_INTERVAL_MS=20000
+
