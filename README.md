@@ -84,9 +84,9 @@ REDIS_USE_TLS=true
 
 4. **Start the server:**
 
-``bash
+```bash
 npm run start
-``
+```
 
 5. **The server will run at http://localhost:4000.**
 
@@ -94,15 +94,14 @@ npm run start
 
 ## API Endpoints
 
-1. **Get latest price:**
+- **Get latest price:**
 
    GET /api/price/:symbol
 
    Example: /api/price/bitcoin
-
-2. **Create an alert:**
+- **Create an alert:**
    
-POST /api/alerts
+   POST /api/alerts
 Body:
 ```json
 {
@@ -113,7 +112,7 @@ Body:
 }
 ```
 
-3. **Get user alerts:**
+- **Get user alerts:**
    
     GET /api/alerts/:userId
 
