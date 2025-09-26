@@ -61,12 +61,12 @@ This project is a real-time cryptocurrency monitoring and alerting system. It al
  git clone https://github.com/<your-username>/CryptoMonitoring.git
  cd CryptoMonitoring
 
- Install dependencies:
+2. **Install dependencies:**
 
  ```bash
  npm install
 
- Set up environment variables in a .env file:
+3. **Set up environment variables in a .env file:**
 
  ```bash
  PORT=4000
