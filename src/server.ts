@@ -15,7 +15,7 @@ const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*" } });
 
 io.on("connection", (socket) => {
-  console.log("🔌 User connected:", socket.id);
+  console.log("User connected:", socket.id);
 
   socket.on("identify", (userId: string) => {
     socket.join(userId);
