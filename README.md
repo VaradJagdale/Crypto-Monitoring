@@ -96,8 +96,9 @@ npm run start
 
 1. **Get latest price:**
 
-GET /api/price/:symbol
-Example: /api/price/bitcoin
+   GET /api/price/:symbol
+
+   Example: /api/price/bitcoin
 
 2. **Create an alert:**
    
@@ -114,8 +115,9 @@ Body:
 
 3. **Get user alerts:**
    
-GET /api/alerts/:userId
-Example: /api/alerts/testUser1
+    GET /api/alerts/:userId
+
+    Example: /api/alerts/testUser1
 
 
 
