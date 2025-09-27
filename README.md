@@ -119,6 +119,30 @@ Body:
 
     Example: /api/alerts/testUser1
 
+---
+
+## App Flow
+
+1. **Server Startup:**
+   - Connects to MongoDB.
+   - Connects to Redis.
+   - Starts the price fetcher loop.
+
+2. **Price Fetching:**
+   - Every 20 seconds, fetches prices for tracked cryptocurrencies.
+   - Updates Redis cache with the latest prices.
+   - Emits price updates via Socket.IO.
+
+3. **Alert Evaluation:**
+   - For each fetched price, evaluate all alerts from MongoDB.
+   - If condition is met (price above or below target), trigger the alert.
+   - Emit alert via Socket.IO or log in terminal.
+
+4. **API Routes:**
+   - `GET /api/price/:symbol` → Returns the latest cached price.
+   - `POST /api/alerts` → Create a new alert with `userId`, `symbol`, `condition`, `target`, `active`.
+   - `GET /api/alerts/:userId` → Returns all alerts for a specific user.
+
 
 
 
