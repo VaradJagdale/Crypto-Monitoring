@@ -143,6 +143,17 @@ Body:
    - `POST /api/alerts` → Create a new alert with `userId`, `symbol`, `condition`, `target`, `active`.
    - `GET /api/alerts/:userId` → Returns all alerts for a specific user.
 
+---
+
+## Challenges Faced and Solutions
+
+| Challenge                                          | Solution                                                                                                              |
+| -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Connecting to Redis Cloud with SSL                 | Fixed by using Node Redis `createClient` with `socket` configuration (host, port) and authentication credentials.     |
+| ES Module vs CommonJS errors when using TypeScript | Configured `tsconfig.json` with `module: ESNext` and used `ts-node` instead of `ts-node-dev` to avoid `--esm` issues. |
+| CoinGecko API rate limits (HTTP 429)               | Reduced fetch interval to 20 seconds and implemented error handling to prevent crash.                                 |
+| Real-time alerts without polling manually          | Implemented `evaluateAlerts()` inside the price fetcher loop and emit alerts immediately via Socket.IO.               |
+
 
 
 
