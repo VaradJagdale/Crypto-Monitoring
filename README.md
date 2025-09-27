@@ -14,7 +14,7 @@
 - [API Endpoints](#api-endpoints)  
 - [App Flow](#app-flow)  
 - [Challenges & Solutions](#challenges--solutions)  
-- [License](#license)  
+- [Conclusion](#conclusion)  
 
 ---
 
@@ -153,6 +153,22 @@ Body:
 | ES Module vs CommonJS errors when using TypeScript | Configured `tsconfig.json` with `module: ESNext` and used `ts-node` instead of `ts-node-dev` to avoid `--esm` issues. |
 | CoinGecko API rate limits (HTTP 429)               | Reduced fetch interval to 20 seconds and implemented error handling to prevent crash.                                 |
 | Real-time alerts without polling manually          | Implemented `evaluateAlerts()` inside the price fetcher loop and emit alerts immediately via Socket.IO.  |
+
+---
+
+## Conclusion
+
+The application successfully implements:
+
+- Real-time cryptocurrency price monitoring.
+- User-defined alerting system.
+- Efficient caching with Redis.
+
+The system can be further enhanced by adding notifications to users via email or push messages, expanding supported cryptocurrencies, and integrating a web dashboard.
+
+---
+
+**End of Document**
 
 
 
